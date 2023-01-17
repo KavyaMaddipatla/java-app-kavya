@@ -158,20 +158,6 @@
           <artifactId>jetty-maven-plugin</artifactId>
           <version>8.0.0.M1</version>
         </plugin>
-        <plugin>
-   <groupId>org.sonarsource.scanner.maven</groupId>
-   <artifactId>sonar-maven-plugin</artifactId>
-   <version>3.7.0</version>
-   <executions>
-       <execution>
-          <id>verify-sonar</id>
-          <phase>verify</phase>
-          <goals>
-             <goal>sonar</goal>
-          </goals>
-        </execution>
-    </executions>
-</plugin>
                
       </plugins>
     </pluginManagement>
@@ -190,7 +176,11 @@
         <artifactId>jsp-api</artifactId>
         <version>2.2</version>
       </dependency>
-
+      <dependency>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>3.8.0.2131</version>
+      </dependency>
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit-dep</artifactId>
