@@ -1,4 +1,5 @@
-FROM lolhens/baseimage-openjre
-ADD target/*.jar springbootApp.jar
-EXPOSE 8085
-ENTRYPOINT ["java", "-jar", "springbootApp.jar"]
+From tomcat:8-jre8
+
+# Maintainer 
+MAINTAINER "valaxytech@gmail.com" 
+COPY ./webapp.war /usr/local/tomcat/webapps
