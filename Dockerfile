@@ -1,5 +1,4 @@
-From tomcat:8-jre8
-
-# Maintainer 
-MAINTAINER "valaxytech@gmail.com" 
-COPY ./webapp.war /usr/local/tomcat/webapps
+FROM openjdk:11
+ADD target/my-maven-docker-project.jar myproject.jar
+ENTRYPOINT ["java", "-jar","myproject.jar"]
+EXPOSE 8080
